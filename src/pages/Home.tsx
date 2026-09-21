@@ -320,7 +320,7 @@ export function Home() {
                   onError={(e) => {
                     const target = e.currentTarget;
                     if (!target.src.includes('hero-family.png')) {
-                      target.src = '/assets/hero-family.png';
+                      target.src = 'assets/hero-family.png';
                     }
                   }}
                   className="w-full h-full object-cover object-[center_35%] transform group-hover:scale-105 transition-transform duration-700 filter contrast-[1.04]"
