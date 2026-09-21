@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@theme {
+  /* SHAMS Brand Core Palette — Exact Specification */
+  --color-shams-navy: #0B2F4A;      /* Primary: Deep Navy (Dominant, Header, Footer, Major Headings, Authority) */
+  --color-shams-navy-dark: #071E30; /* Darker Navy Shade for Depth */
+  --color-shams-navy-light: #13456C;/* Lighter Navy Shade for subtle contrasts */
+
+  --color-shams-teal: #0F888D;      /* Secondary: Teal (Buttons, Links, Icons, Highlights, Hover) */
+  --color-shams-teal-light: #16A5AB;/* Fresh Teal Highlight */
+  --color-shams-teal-dark: #0A666A; /* Deep Teal */
+
+  --color-shams-sage: #6BAF7B;      /* Health / Wellness: Sage Green (Health Program, Progress, Recommendations) */
+  --color-shams-sage-light: #8DC49B;/* Light Sage */
+  --color-shams-sage-dark: #4F8F5D; /* Deep Sage */
+
+  --color-shams-gold: #D4AF37;      /* Premium Accent: Warm Gold (Highlights, Badges, Recommended) */
+  --color-shams-gold-dark: #B59328; /* Deep Warm Gold */
+
+  --color-shams-mauve: #7B3F7F;     /* Accent: Mauve Purple (Academy, Education, Mental Wellbeing) */
+  --color-shams-mauve-light: #9B569F;
+  --color-shams-mauve-dark: #5C2B60;
+
+  --color-shams-burgundy: #A43E56;  /* Accent: Burgundy Red (Alerts, Attention, Specialty) */
+  --color-shams-burgundy-light: #C0526D;
+  --color-shams-burgundy-dark: #842A3F;
+
+  --color-shams-sand: #F5F5F2;      /* Neutral: Sand / Light (Main Background, Spacious Cards) */
+  --color-shams-sand-light: #FAFAF8;
+  --color-shams-sand-dark: #EAEAE5;
+
+  /* Dedicated Sage Green System for Health Program (Visual Identity) */
+  --color-shams-green-deep: #143D28;
+  --color-shams-green-primary: #6BAF7B;
+  --color-shams-green-sage: #6BAF7B;
+  --color-shams-green-mint: #52B788;
+  --color-shams-green-light: #DDF1E2;
+  --color-shams-green-subtle: #F3FAF5;
+  --color-shams-green-border: #9ED4AC;
+
+  --font-vazirmatn: "Vazirmatn", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Vazirmatn", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Inter", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-shams-sand);
+    --foreground: var(--color-shams-navy);
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-vazirmatn);
+    font-weight: 400;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Global Persian Typography Hierarchy */
+  h1 {
+    font-family: var(--font-vazirmatn);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  h2 {
+    font-family: var(--font-vazirmatn);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-family: var(--font-vazirmatn);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-vazirmatn);
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  p {
+    font-family: var(--font-vazirmatn);
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  /* Navigation: Vazirmatn 500 */
+  nav, .nav-item, .nav-link {
+    font-family: var(--font-vazirmatn);
+    font-weight: 500;
+  }
+
+  /* Buttons & CTAs: Vazirmatn 600 */
+  button, [role="button"], .btn {
+    font-family: var(--font-vazirmatn);
+    font-weight: 600;
+  }
+
+  /* Labels, Forms, Tooltips, Cards: Vazirmatn 500 / 600 */
+  label, input, textarea, select {
+    font-family: var(--font-vazirmatn);
+  }
+}
+
+@utility font-vazirmatn {
+  font-family: var(--font-vazirmatn);
+}
+
+@utility font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Dedicated Number & Data Typography — Clean + Modern + Minimal + Premium Inter */
+@utility font-numeric {
+  font-family: var(--font-inter);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.015em;
+  direction: ltr;
+  display: inline-block;
+  unicode-bidi: isolate;
+}
+
+@utility metric-large {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  display: inline-block;
+  unicode-bidi: isolate;
+  line-height: 1.1;
+}
+
+@utility metric-small {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  display: inline-block;
+  unicode-bidi: isolate;
+  line-height: 1.2;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* Refined Neon Health Analytics Utilities (Minimal + Scientific + Premium) */
+@utility neon-glow-teal {
+  filter: drop-shadow(0 0 8px rgba(15, 136, 141, 0.35));
+}
+
+@utility neon-glow-cyan {
+  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.35));
+}
+
+@utility neon-glow-gold {
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+}
+
+@utility neon-card-glow {
+  box-shadow: 0 4px 24px -2px rgba(15, 136, 141, 0.08), 0 0 0 1px rgba(15, 136, 141, 0.12);
+}
+
+@utility neon-pulse-ring {
+  animation: neon-subtle-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes neon-subtle-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+

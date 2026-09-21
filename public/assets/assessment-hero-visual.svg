@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1000" width="2400" height="1000">
+  <defs>
+    <!-- Gradients based on reference image palette -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#071726" />
+      <stop offset="35%" stop-color="#0A2540" />
+      <stop offset="60%" stop-color="#1B3A57" />
+      <stop offset="78%" stop-color="#7B5B3E" />
+      <stop offset="88%" stop-color="#D97A29" />
+      <stop offset="95%" stop-color="#F5A623" />
+      <stop offset="100%" stop-color="#FFE4A0" />
+    </linearGradient>
+
+    <!-- Golden Sun Burst Gradient -->
+    <radialGradient id="sunGlow" cx="62%" cy="48%" r="45%">
+      <stop offset="0%" stop-color="#FFF8E7" stop-opacity="1" />
+      <stop offset="12%" stop-color="#FCD34D" stop-opacity="0.9" />
+      <stop offset="28%" stop-color="#F59E0B" stop-opacity="0.6" />
+      <stop offset="55%" stop-color="#D97706" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0A2540" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Mountain Gradients -->
+    <linearGradient id="mountainRidge1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14314A" />
+      <stop offset="100%" stop-color="#071726" />
+    </linearGradient>
+    <linearGradient id="mountainRidge2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D4144" />
+      <stop offset="100%" stop-color="#08202A" />
+    </linearGradient>
+    <linearGradient id="mountainForest" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#134E48" />
+      <stop offset="50%" stop-color="#0F3832" />
+      <stop offset="100%" stop-color="#06181B" />
+    </linearGradient>
+
+    <!-- Assessment Holographic Biometric Gradients -->
+    <linearGradient id="goldTealRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A623" />
+      <stop offset="40%" stop-color="#FCD34D" />
+      <stop offset="70%" stop-color="#14B8A6" />
+      <stop offset="100%" stop-color="#0F888D" />
+    </linearGradient>
+    <linearGradient id="tealCyanRing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F888D" />
+      <stop offset="50%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#E0F2FE" />
+    </linearGradient>
+    <linearGradient id="humanGlowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" stop-opacity="0.95" />
+      <stop offset="30%" stop-color="#FDE68A" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#5EEAD4" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0F888D" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Negative space gradient to ensure clean typography on one side -->
+    <linearGradient id="textFadeRTL" x1="100%" y1="0%" x2="40%" y2="0%">
+      <stop offset="0%" stop-color="#0A2540" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#0A2540" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0A2540" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Subtle glow filter -->
+    <filter id="crispGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- SKY BACKGROUND -->
+  <rect width="2400" height="1000" fill="url(#skyGrad)" />
+
+  <!-- MORNING SUN ON CENTRAL PEAK (Inspired by reference image) -->
+  <circle cx="1560" cy="470" r="320" fill="url(#sunGlow)" />
+  <circle cx="1560" cy="470" r="28" fill="#FFFFFF" />
+
+  <!-- SUNLIGHT RAYS -->
+  <polygon points="1560,470 1420,0 1480,0" fill="#FFEBA0" opacity="0.12" />
+  <polygon points="1560,470 1540,0 1620,0" fill="#FFEBA0" opacity="0.18" />
+  <polygon points="1560,470 1680,0 1760,0" fill="#FFEBA0" opacity="0.14" />
+  <polygon points="1560,470 1860,100 1960,120" fill="#FFEBA0" opacity="0.08" />
+
+  <!-- DISTANT MOUNTAIN SILHOUETTES -->
+  <path d="M0,520 Q300,420 620,490 T1240,460 T1560,472 T1900,450 T2400,490 L2400,1000 L0,1000 Z" fill="url(#mountainRidge1)" opacity="0.85" />
+  <path d="M0,560 Q400,490 850,530 T1560,482 T2050,520 T2400,540 L2400,1000 L0,1000 Z" fill="url(#mountainRidge2)" opacity="0.9" />
+
+  <!-- FOREGROUND LUSH EVERGREEN PEAKS -->
+  <path d="M0,640 Q350,580 720,620 Q1100,660 1420,560 Q1560,490 1700,580 Q1950,680 2400,600 L2400,1000 L0,1000 Z" fill="url(#mountainForest)" />
+
+  <!-- ATMOSPHERIC MORNING MIST LAYERS -->
+  <path d="M400,580 C700,540 1000,590 1300,570 C1600,550 1900,600 2400,570 L2400,630 C1900,640 1500,610 1100,630 C700,650 400,620 400,580 Z" fill="#D0E1E9" opacity="0.12" />
+  <path d="M0,690 C450,670 900,700 1350,680 C1800,660 2150,710 2400,685 L2400,740 C2000,745 1600,720 1200,740 C750,760 350,730 0,690 Z" fill="#D0E1E9" opacity="0.08" />
+
+  <!-- ========================================================================= -->
+  <!-- HEALTH ASSESSMENT & BIOMETRICS VISUAL (FOCAL POINT ON THE VISUAL SIDE)   -->
+  <!-- ========================================================================= -->
+  <g transform="translate(680, 480)">
+
+    <!-- Ambient Diagnostic Halo -->
+    <circle cx="0" cy="0" r="340" fill="none" stroke="url(#tealCyanRing)" stroke-width="1.5" stroke-dasharray="6 14" opacity="0.4" />
+    <circle cx="0" cy="0" r="300" fill="none" stroke="url(#goldTealRing)" stroke-width="1" opacity="0.3" />
+
+    <!-- Core Biometric Concentric Gauge Rings -->
+    <circle cx="0" cy="0" r="260" fill="none" stroke="#F5A623" stroke-width="2.5" opacity="0.65" stroke-dasharray="280 80 140 60" />
+    <circle cx="0" cy="0" r="235" fill="none" stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.5" />
+    <circle cx="0" cy="0" r="210" fill="none" stroke="#FCD34D" stroke-width="2" stroke-dasharray="180 120" opacity="0.8" />
+    <circle cx="0" cy="0" r="185" fill="none" stroke="#2DD4BF" stroke-width="1" opacity="0.4" />
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#F5A623" stroke-width="2" stroke-dasharray="320 60" opacity="0.75" />
+
+    <!-- Holographic Hexagonal Health Matrix -->
+    <polygon points="0,-275 238,-138 238,138 0,275 -238,138 -238,-138" fill="none" stroke="#2DD4BF" stroke-width="1.2" opacity="0.35" />
+    <polygon points="0,-240 208,-120 208,120 0,240 -208,120 -208,-120" fill="none" stroke="#FCD34D" stroke-width="0.8" opacity="0.25" stroke-dasharray="12 12" />
+
+    <!-- 12-Axis Radial Assessment Indicators (Representing Biomarkers & Lifestyle Pillars) -->
+    <line x1="0" y1="-280" x2="0" y2="-250" stroke="#FCD34D" stroke-width="2.5" />
+    <line x1="140" y1="-242" x2="125" y2="-216" stroke="#2DD4BF" stroke-width="2" />
+    <line x1="242" y1="-140" x2="216" y2="-125" stroke="#FCD34D" stroke-width="2.5" />
+    <line x1="280" y1="0" x2="250" y2="0" stroke="#2DD4BF" stroke-width="2" />
+    <line x1="242" y1="140" x2="216" y2="125" stroke="#FCD34D" stroke-width="2.5" />
+    <line x1="140" y1="242" x2="125" y2="216" stroke="#2DD4BF" stroke-width="2" />
+    <line x1="0" y1="280" x2="0" y2="250" stroke="#FCD34D" stroke-width="2.5" />
+    <line x1="-140" y1="242" x2="-125" y2="216" stroke="#2DD4BF" stroke-width="2" />
+    <line x1="-242" y1="140" x2="-216" y2="125" stroke="#FCD34D" stroke-width="2.5" />
+    <line x1="-280" y1="0" x2="-250" y2="0" stroke="#2DD4BF" stroke-width="2" />
+    <line x1="-242" y1="-140" x2="-216" y2="-125" stroke="#FCD34D" stroke-width="2.5" />
+    <line x1="-140" y1="-242" x2="-125" y2="-216" stroke="#2DD4BF" stroke-width="2" />
+
+    <!-- Orbital Assessment Data Spheres / Nodes -->
+    <circle cx="0" cy="-260" r="7" fill="#FCD34D" filter="url(#crispGlow)" />
+    <circle cx="225" cy="-130" r="5.5" fill="#2DD4BF" filter="url(#crispGlow)" />
+    <circle cx="260" cy="0" r="6.5" fill="#F5A623" filter="url(#crispGlow)" />
+    <circle cx="184" cy="184" r="5" fill="#5EEAD4" filter="url(#crispGlow)" />
+    <circle cx="0" cy="260" r="6" fill="#FCD34D" filter="url(#crispGlow)" />
+    <circle cx="-225" cy="130" r="5.5" fill="#2DD4BF" filter="url(#crispGlow)" />
+    <circle cx="-260" cy="0" r="6.5" fill="#F5A623" filter="url(#crispGlow)" />
+    <circle cx="-184" cy="-184" r="5" fill="#5EEAD4" filter="url(#crispGlow)" />
+
+    <!-- Real-Time Vital Signs Pulse Waves (Cardiorespiratory & Biological Rhythm) -->
+    <path d="M-210,0 L-130,0 L-115,-28 L-100,32 L-85,-45 L-70,55 L-55,-18 L-40,0 L40,0 L55,-18 L70,55 L85,-45 L100,32 L115,-28 L130,0 L210,0" 
+          fill="none" stroke="url(#goldTealRing)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+
+    <!-- ELEGANT CENTRAL HUMAN VITALITY & POSTURE FIGURE (Clinical Biomechanics & Longevity) -->
+    <g transform="translate(0, -10) scale(1.15)">
+      <!-- Head / Cranial Vitality -->
+      <circle cx="0" cy="-125" r="16" fill="url(#humanGlowGrad)" filter="url(#crispGlow)" />
+      <!-- Mind / Neuro Synapse Ring -->
+      <ellipse cx="0" cy="-125" rx="24" ry="10" fill="none" stroke="#FCD34D" stroke-width="1.2" opacity="0.8" transform="rotate(-15, 0, -125)" />
+
+      <!-- Spine / Kinetic Alignment Core -->
+      <path d="M0,-105 Q-2,-50 0,0 Q2,50 0,90" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Torso / Biological Energy Silhouette -->
+      <path d="M-26,-80 Q0,-92 26,-80 Q32,-40 20,5 Q14,35 18,75 L-18,75 Q-14,35 -20,5 Q-32,-40 -26,-80 Z" 
+            fill="url(#humanGlowGrad)" opacity="0.3" stroke="url(#goldTealRing)" stroke-width="1.5" />
+
+      <!-- Biological Heart Center (Cardiac & Vitality Focus) -->
+      <circle cx="4" cy="-45" r="8" fill="#F5A623" filter="url(#crispGlow)" />
+      <circle cx="4" cy="-45" r="18" fill="none" stroke="#FCD34D" stroke-width="1" opacity="0.6" stroke-dasharray="3 3" />
+
+      <!-- Balanced Kinetic Arms (Symmetrical Posture) -->
+      <path d="M-24,-75 Q-65,-55 -85,-20" fill="none" stroke="url(#goldTealRing)" stroke-width="2.5" stroke-linecap="round" opacity="0.85" />
+      <path d="M24,-75 Q65,-55 85,-20" fill="none" stroke="url(#goldTealRing)" stroke-width="2.5" stroke-linecap="round" opacity="0.85" />
+
+      <!-- Lower Body Grounding & Balance -->
+      <path d="M-14,75 Q-24,120 -30,165" fill="none" stroke="url(#tealCyanRing)" stroke-width="2.8" stroke-linecap="round" opacity="0.85" />
+      <path d="M14,75 Q24,120 30,165" fill="none" stroke="url(#tealCyanRing)" stroke-width="2.8" stroke-linecap="round" opacity="0.85" />
+    </g>
+
+    <!-- Metabolic Balance Radar Polygon (Dynamic Health Dimensions Representation) -->
+    <polygon points="0,-175 140,-70 120,95 0,140 -115,85 -130,-75" 
+             fill="#0F888D" fill-opacity="0.18" stroke="#2DD4BF" stroke-width="1.8" stroke-linejoin="round" />
+
+    <circle cx="0" cy="-175" r="4" fill="#FCD34D" />
+    <circle cx="140" cy="-70" r="4" fill="#2DD4BF" />
+    <circle cx="120" cy="95" r="4" fill="#F5A623" />
+    <circle cx="0" cy="140" r="4" fill="#2DD4BF" />
+    <circle cx="-115" cy="85" r="4" fill="#FCD34D" />
+    <circle cx="-130" cy="-75" r="4" fill="#2DD4BF" />
+
+    <!-- Outer Depth Rings (3D Perspective Orbit) -->
+    <ellipse cx="0" cy="0" rx="310" ry="110" fill="none" stroke="url(#goldTealRing)" stroke-width="1.4" opacity="0.45" transform="rotate(-25)" />
+    <ellipse cx="0" cy="0" rx="270" ry="85" fill="none" stroke="#2DD4BF" stroke-width="1" opacity="0.3" transform="rotate(35)" />
+  </g>
+
+  <!-- VIGNETTE EDGES -->
+  <rect width="2400" height="1000" fill="none" stroke="#071726" stroke-width="2" opacity="0.3" />
+</svg>

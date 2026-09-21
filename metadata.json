@@ -1,0 +1,7 @@
+{
+  "name": "SHAMS Health & Wellbeing Ecosystem",
+  "description": "A comprehensive digital health platform offering personalized assessments, actionable insights, and science-backed lifestyle plans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
