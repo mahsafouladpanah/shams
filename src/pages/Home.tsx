@@ -196,13 +196,13 @@ export function Home() {
         {/* Full-bleed background photo spanning 100% edge-to-edge */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
           <img
-            src="/Gemini_Generated_Image_wlb6rswlb6rswlb6 1 (4).png"
+            src="assets/Gemini_Generated_Image_wlb6rswlb6rswlb6 1 (4).png"
             alt={lang === 'en' ? 'Evidence-based longevity and multi-generational vitality' : 'پزشکی مبتنی بر شواهد برای طول عمر سالم و زندگی پرنشاط'}
             referrerPolicy="no-referrer"
             onError={(e) => {
               const target = e.currentTarget;
               if (!target.src.includes('hero-family.png')) {
-                target.src = '/hero-family.png';
+                target.src = 'assets/hero-family.png';
               }
             }}
             className="w-full h-full object-cover object-[center_30%] sm:object-[center_35%] lg:object-center transform scale-100 filter brightness-[0.78] contrast-[1.06] transition-transform duration-1000"
@@ -314,7 +314,7 @@ export function Home() {
               <div className="aspect-[16/10] w-full overflow-hidden relative">
                 <img
                   id="hero-featured-photo"
-                  src="/Gemini_Generated_Image_wlb6rswlb6rswlb6 1 (4).png"
+                  src="assets/Gemini_Generated_Image_wlb6rswlb6rswlb6 1 (4).png"
                   alt={lang === 'en' ? 'Multi-generational family vitality and evidence-based longevity' : 'طول عمر و نشاط چندنسلی در سبک زندگی سالم و فعال'}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
