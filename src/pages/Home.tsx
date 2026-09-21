@@ -314,7 +314,7 @@ export function Home() {
               <div className="aspect-[16/10] w-full overflow-hidden relative">
                 <img
                   id="hero-featured-photo"
-                  src="assets/Gemini_Generated_Image_wlb6rswlb6rswlb6 1 (4).png"
+                  src="/Gemini_Generated_Image_wlb6rswlb6rswlb6 1 (4).png"
                   alt={lang === 'en' ? 'Multi-generational family vitality and evidence-based longevity' : 'طول عمر و نشاط چندنسلی در سبک زندگی سالم و فعال'}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
